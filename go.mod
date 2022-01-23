@@ -1,4 +1,4 @@
-module usyou.com/tech/grpc-go-java
+module github.com/justin-defodji/grpc-go-java/pb
 
 go 1.17
 

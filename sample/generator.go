@@ -1,7 +1,7 @@
 package sample
 
 import (
-	"../pb"
+	"github.com/justin-defodji/grpc-go-java/pb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"time"
 )
@@ -9,7 +9,7 @@ import (
 // NewKeyboard return new sample keyboard
 func NewKeyboard() *pb.Keyboard {
 	keyboard := &pb.Keyboard{
-		Layout:  randomKeyboardLayout(),
+		Layout:  pb.Keyboard_Layout(randomKeyboardLayout()),
 		Backlit: randomBool(),
 	}
 

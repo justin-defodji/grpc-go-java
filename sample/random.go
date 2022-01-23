@@ -6,7 +6,7 @@ import (
 
 	"github.com/google/uuid"
 
-	"../pb"
+	"github.com/justin-defodji/grpc-go-java/pb"
 )
 
 func init() {
