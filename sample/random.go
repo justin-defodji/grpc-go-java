@@ -1,12 +1,11 @@
 package sample
 
 import (
+	"gitlab.com/techschool/pcbook/pb"
 	"math/rand"
 	"time"
 
 	"github.com/google/uuid"
-
-	"github.com/justin-defodji/grpc-go-java/pb"
 )
 
 func init() {

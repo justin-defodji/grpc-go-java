@@ -1,10 +1,12 @@
-package serializer
+package serializer_test
 
 import (
 	"github.com/stretchr/testify/require"
 	"testing"
 
-	"../sample"
+	"gitlab.com/techschool/pcbook/sample"
+
+	"../serializer"
 )
 
 func TestFIleSerializer(t *testing.T) {
@@ -14,6 +16,6 @@ func TestFIleSerializer(t *testing.T) {
 
 	laptop1 := sample.NewLaptop()
 
-	err := WriteProtobufBinaryFile(laptop1, binaryFIle)
+	err := serializer.WriteProtobufToBinaryFile(laptop1, binaryFIle)
 	require.NoError(t, err)
 }

@@ -1,7 +1,7 @@
 package sample
 
 import (
-	"github.com/justin-defodji/grpc-go-java/pb"
+	"gitlab.com/techschool/pcbook/pb"
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"time"
 )
@@ -112,18 +112,18 @@ func NewScreen() *pb.Screen {
 }
 
 // NewLaptop return new sample laptop
-func NewLaptop() *pb.Labtop {
+func NewLaptop() *pb.Laptop {
 	brand := randomLaptopBrand()
 	name := randomLaptopName(brand)
 
-	laptop := &pb.Labtop{
+	laptop := &pb.Laptop{
 		Id:       randomID(),
 		Brand:    brand,
 		Name:     name,
 		Cpu:      NewCPU(),
 		Gpus:     []*pb.GPU{NewGPU()},
 		Storages: []*pb.Storage{NewSSD(), NewHDD()},
-		Weight: &pb.Labtop_WeightKg{
+		Weight: &pb.Laptop_WeightKg{
 			WeightKg: randomFloat64(1.0, 3.0),
 		},
 		PriceUsd:    randomFloat64(1500, 3000),
